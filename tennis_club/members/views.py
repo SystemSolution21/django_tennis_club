@@ -26,3 +26,12 @@ def details(request, id) -> HttpResponse:
         "members": members,
     }
     return HttpResponse(content=template.render(context=context, request=request))
+
+
+# Testing view
+def testing(request):
+    template = loader.get_template(template_name="template.html")
+    context = {
+        "fruits": ["Apple", "Banana", "Orange"],
+    }
+    return HttpResponse(content=template.render(context=context, request=request))
