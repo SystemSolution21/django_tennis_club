@@ -1,39 +1,28 @@
+{% extends 'members/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Testing</title>
-        <link rel="stylesheet" href="{% static 'global.css' %}">
-    </head>
+{% block content %}
 
-    <body>
+<h1>Tennis Club Members</h1>
 
-        <h1>Tennis Club Members</h1>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Phone</th>
+        <th>Join Date</th>
+    </tr>
 
-        <table border="1">
-            <tr>
-                <th>Id</th>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>Phone</th>
-                <th>Join Date</th>
-            </tr>
+    {% for member in members %}
+    <tr>
+        <td>{{ member.id }}</td>
+        <td>{{ member.firstname }}</td>
+        <td>{{ member.lastname }}</td>
+        <td>{{ member.phone }}</td>
+        <td>{{ member.join_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
 
-            {% for member in members %}
-            <tr>
-                <td>{{ member.id }}</td>
-                <td>{{ member.firstname }}</td>
-                <td>{{ member.lastname }}</td>
-                <td>{{ member.phone }}</td>
-                <td>{{ member.join_date }}</td>
-            </tr>
-            {% endfor %}
-
-        </table>
-
-    </body>
-
-</html>
+{% endblock  %}
