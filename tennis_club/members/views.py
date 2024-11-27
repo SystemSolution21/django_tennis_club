@@ -7,14 +7,14 @@ from .models import Member
 
 # Root page
 def index(request) -> HttpResponse:
-    template = loader.get_template(template_name="index.html")
+    template = loader.get_template(template_name="members/index.html")
     return HttpResponse(content=template.render())
 
 
 # Members
 def members(request) -> HttpResponse:
     members = Member.objects.all().values()
-    template = loader.get_template(template_name="members.html")
+    template = loader.get_template(template_name="members/members.html")
     context = {
         "members": members,
     }
@@ -24,7 +24,7 @@ def members(request) -> HttpResponse:
 # Member details
 def details(request, id) -> HttpResponse:
     members = Member.objects.get(id=id)
-    template = loader.get_template(template_name="details.html")
+    template = loader.get_template(template_name="members/details.html")
     context = {
         "members": members,
     }
@@ -34,7 +34,7 @@ def details(request, id) -> HttpResponse:
 # Testing view
 def testing(request) -> HttpResponse:
     data = Member.objects.all()
-    template = loader.get_template(template_name="template.html")
+    template = loader.get_template(template_name="members/template.html")
     context = {
         "members": data,
     }
