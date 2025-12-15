@@ -10,12 +10,18 @@ __pycache__
 # virtualenv
 .venv
 
+# Environment variables
+.env
+
+# django
+media
+
 # editor
 .vscode 
 .idea
 
 # static files
-staticfiles
+staticfiles/
 
 # database
 db.sqlite3
