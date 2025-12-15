@@ -1,5 +1,21 @@
-.venv
-poetry.lock
+# python
 __pycache__
+*.pyc
+*.pyo
+*.egg-info
+*.egg
+*.whl
+*.log
+
+# virtualenv
+.venv
+
+# editor
 .vscode 
+.idea
+
+# static files
 staticfiles
+
+# database
+db.sqlite3
