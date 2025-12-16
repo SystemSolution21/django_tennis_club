@@ -1,13 +1,15 @@
 {% extends 'members/base.html' %}
 
 {% block title %}
-Details about {{ members.firstname }} {{ members.lastname }}
+    Details about {{ members.firstname }} {{ members.lastname }}
 {% endblock %}
 
 {% block content %}
-<div class="mycard">
-    <h1>{{ members.firstname }} {{ members.lastname }}</h1>
-    <p>Phone: {{ members.phone }}</p>
-    <p>Member since: {{ members.join_date }}</p>
-</div>
+    <div class="mycard">
+        <h1>{{ members.firstname }} {{ members.lastname }}</h1>
+        <p>Phone: {{ members.phone }}</p>
+        <p>Member since: {{ members.join_date }}</p>
+        
+        <p><a href="/members">Back to all members</a></p>
+    </div>
 {% endblock %}

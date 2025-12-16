@@ -1,19 +1,17 @@
 {% extends 'members/base.html' %}
 
 {% block title %}
-Tennis Club - List of members
+  Tennis Club - List of members
 {% endblock %}
 
 {% block content %}
+  <div class="mycard">
+    <h1>Members</h1>
 
-<div class="mycard">
-  <h1>Members</h1>
-
-  <ul>
-    {% for member in members %}
-    <li onclick="window.location = 'details/{{ member.id }}'">{{ member.firstname }} {{ member.lastname }}</li>
-    {% endfor %}
-  </ul>
-
-  {% endblock %}
-</div>
+    <ul>
+      {% for member in members %}
+      <li onclick="window.location = 'details/{{ member.id }}'">{{ member.firstname }} {{ member.lastname }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
