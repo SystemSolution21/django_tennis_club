@@ -20,5 +20,9 @@ media
 .vscode 
 .idea
 
+# static files
+staticfiles/*
+!staticfiles/members/
+
 # database
 db.sqlite3
