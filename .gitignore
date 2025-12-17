@@ -21,8 +21,8 @@ media
 .idea
 
 # static files
-staticfiles/*
-!staticfiles/members/
+staticfiles/
+!.gitkeep
 
 # database
 db.sqlite3
