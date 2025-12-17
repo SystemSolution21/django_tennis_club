@@ -5,8 +5,19 @@
 {% endblock %}
 
 {% block content %}
+  <style>
+    .members-header {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 5px;
+    }
+    .members-header a {
+      color: white;
+    }
+  </style>
   <div class="mycard">
-    <h1>Members</h1>
+    <h1 class="members-header"><span>Members</span><a href="/tables"> &gt;&gt; </a></h1>
 
     <ul>
       {% for member in members %}

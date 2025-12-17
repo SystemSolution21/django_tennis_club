@@ -31,9 +31,9 @@ def details(request, id) -> HttpResponse:
 
 
 # Testing view
-def testing(request) -> HttpResponse:
+def tables(request) -> HttpResponse:
     data = Member.objects.all()
-    template = loader.get_template(template_name="members/template.html")
+    template = loader.get_template(template_name="members/tables.html")
     context = {
         "members": data,
     }

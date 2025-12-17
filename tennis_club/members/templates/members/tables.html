@@ -1,0 +1,38 @@
+{% extends 'members/base.html' %} {% load static %} {% block content %}
+<style>
+  .mycard {
+    width: fit-content;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    text-align: center;
+  }
+</style>
+<div class="mycard">
+  <h1>Members Details</h1>
+
+  <table class="center">
+    <tr>
+      <th>Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Phone</th>
+      <th>Join Date</th>
+    </tr>
+
+    {% for member in members %}
+    <tr>
+      <td>{{ member.id }}</td>
+      <td>{{ member.firstname }}</td>
+      <td>{{ member.lastname }}</td>
+      <td>{{ member.phone }}</td>
+      <td>{{ member.join_date }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p><a href="/members">Back</a></p>
+</div>
+{% endblock %}
