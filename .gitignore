@@ -20,12 +20,18 @@ media
 .vscode 
 .idea
 
-# Staticfiles
-staticfiles/*
-!staticfiles/members/
-!staticfiles/members/**
-!staticfiles/global.css
-staticfiles/admin/
+# Ignore everything in staticfiles
+tennis_club/staticfiles/*
+
+# Allow members folder and its files
+!tennis_club/staticfiles/members/
+!tennis_club/staticfiles/members/**
+
+# Allow global.css
+!tennis_club/staticfiles/global.css
+
+# Ignore admin folder explicitly
+tennis_club/staticfiles/admin/
 
 # database
 db.sqlite3
