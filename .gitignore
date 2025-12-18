@@ -20,8 +20,13 @@ media
 .vscode 
 .idea
 
-# static files
-staticfiles/
+# Staticfiles
+staticfiles/*
+!staticfiles/members/
+!staticfiles/members/**
+!staticfiles/global.css
+staticfiles/admin/
+staticfiles/admin/**
 
 # database
 db.sqlite3
