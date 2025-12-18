@@ -6,7 +6,8 @@ class Member(models.Model):
     lastname = models.CharField(max_length=255)
     phone = models.IntegerField(null=True)
     join_date = models.DateField(null=True)
-    slug = models.SlugField(null=False, default="")
+    # Allow unicode characters in the slug
+    slug = models.SlugField(default="", null=False, allow_unicode=True)
 
     def __str__(self) -> str:
         return f"{self.firstname} {self.lastname}"

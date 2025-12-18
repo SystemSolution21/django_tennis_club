@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     path(route="", view=views.index, name="index"),
     path(route="members/", view=views.members, name="members"),
-    path(route="members/details/<int:id>", view=views.details, name="details"),
+    # Unicode characters are allowed in the slug as string
+    path(route="members/details/<str:slug>", view=views.details, name="details"),
     path(route="tables/", view=views.tables, name="tables"),
 ]
