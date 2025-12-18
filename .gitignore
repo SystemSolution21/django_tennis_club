@@ -26,7 +26,6 @@ staticfiles/*
 !staticfiles/members/**
 !staticfiles/global.css
 staticfiles/admin/
-staticfiles/admin/**
 
 # database
 db.sqlite3
