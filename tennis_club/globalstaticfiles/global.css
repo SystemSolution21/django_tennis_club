@@ -42,6 +42,17 @@ body {
     margin: 20px 0 60px 0;
 }
 
+.mycard a:link,
+.mycard a:visited {
+    text-decoration: none;
+    color: #375BDC;
+}
+
+.mycard a:hover,
+.mycard a:active {
+    text-decoration: underline;
+}
+
 .members-header {
     display: flex;
     justify-content: space-evenly;
@@ -50,14 +61,15 @@ body {
     color: white;
 }
 
-.members-header a,
+.members-header a:link,
 .members-header a:visited {
-    color: white;
     text-decoration: none;
+    color: white;
 }
 
-.members-header a:hover {
-    color: gray;
+.members-header a:hover,
+.members-header a:active {
+    text-decoration: underline;
 }
 
 ul {

@@ -30,10 +30,10 @@ def details(request, slug) -> HttpResponse:
     return HttpResponse(content=template.render(context=context, request=request))
 
 
-# Testing view
-def tables(request) -> HttpResponse:
+# Member details table
+def members_table(request) -> HttpResponse:
     data = Member.objects.all()
-    template = loader.get_template(template_name="members/tables.html")
+    template = loader.get_template(template_name="members/table.html")
     context = {
         "members": data,
     }
